@@ -1,2 +1,2 @@
 # todo-app
-Interactive Todo App created using HTML, CSS &amp; JS
+Interactive Todo App created using React JS

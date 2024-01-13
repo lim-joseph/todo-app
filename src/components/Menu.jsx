@@ -1,6 +1,8 @@
 import "../style.css";
 
 export default function Menu() {
+	const buttonNames = ["All", "Today", "Week", "Starred"];
+
 	return (
 		<aside className="flex flex-col gap-[1rem] bg-neutral-50 w-[20rem] p-[2rem] border border-neutral-50">
 			<h2 className="text-xl font-bold">Menu</h2>
@@ -10,26 +12,13 @@ export default function Menu() {
 				<section className="my-[1rem]">
 					<h3 className="font-medium py-[0.5rem]">Tasks</h3>
 					<ul className="flex flex-col gap-[0.5rem]">
-						<button>
-							<li className="p-[0.5rem] font-medium hover:bg-neutral-100 text-left">
-								All
+						{buttonNames.map((name, index) => (
+							<li key={index}>
+								<button className="p-[0.5rem] font-medium hover:bg-neutral-100 text-left">
+									{name}
+								</button>
 							</li>
-						</button>
-						<button>
-							<li className="p-[0.5rem] font-medium hover:bg-neutral-100 text-left">
-								Today
-							</li>
-						</button>
-						<button>
-							<li className="p-[0.5rem] font-medium hover:bg-neutral-100 text-left">
-								Week
-							</li>
-						</button>
-						<button>
-							<li className="p-[0.5rem] font-medium hover:bg-neutral-100 text-left">
-								Starred
-							</li>
-						</button>
+						))}
 					</ul>
 				</section>
 				<hr />

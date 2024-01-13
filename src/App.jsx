@@ -1,15 +1,14 @@
 import "./style.css";
 import Dashboard from "./components/Dashboard";
-import Sidebar from "./components/Sidebar";
-import TodoItem from "./components/TodoItem";
+import Menu from "./components/Menu";
+import Details from "./components/Details";
 
 export default function App() {
-	console.log("hi");
 	return (
-		<div className="flex bg-red-300">
-			<Sidebar />
+		<div className="h-full flex">
+			<Menu />
 			<Dashboard />
-			<TodoItem />
+			<Details />
 		</div>
 	);
 }

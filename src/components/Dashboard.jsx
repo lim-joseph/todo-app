@@ -2,8 +2,8 @@ import "../style.css";
 
 export default function Dashboard() {
 	return (
-		<div>
-			<h2 className="text-lg font-semibold">Dashboard</h2>
-		</div>
+		<section className="flex-1 p-[2rem] border border-neutral-50">
+			<h2 className="text-xl font-bold ">Dashboard</h2>
+		</section>
 	);
 }

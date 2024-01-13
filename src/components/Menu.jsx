@@ -12,13 +12,15 @@ export default function Menu() {
 				<section className="my-[1rem]">
 					<h3 className="font-medium py-[0.5rem]">Tasks</h3>
 					<ul className="flex flex-col gap-[0.5rem]">
-						{buttonNames.map((name, index) => (
-							<li key={index}>
-								<button className="p-[0.5rem] font-medium hover:bg-neutral-100 text-left">
-									{name}
-								</button>
-							</li>
-						))}
+						{buttonNames.map((name, index) => {
+							return (
+								<li key={index}>
+									<button className="p-[0.5rem] font-medium hover:bg-neutral-100 text-left w-full">
+										{name}
+									</button>
+								</li>
+							);
+						})}
 					</ul>
 				</section>
 				<hr />
@@ -26,16 +28,16 @@ export default function Menu() {
 				<section className="my-[1rem]">
 					<header className="flex justify-between items-center">
 						<h3 className="font-medium py-[0.5rem]">Lists</h3>
-						<button className="hover:bg-neutral-100 p-[0.1rem] px-[0.5rem]">
+						<button className="text-lg hover:bg-neutral-100 p-[0.1rem] px-[0.5rem]">
 							+
 						</button>
 					</header>
 					<ul className="flex flex-col gap-[0.5rem]">
-						<button>
-							<li className="p-[0.5rem] font-medium hover:bg-neutral-100 text-left">
+						<li>
+							<button className="p-[0.5rem] font-medium hover:bg-neutral-100 text-left w-full">
 								Default
-							</li>
-						</button>
+							</button>
+						</li>
 					</ul>
 				</section>
 

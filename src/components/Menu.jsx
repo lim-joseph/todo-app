@@ -4,11 +4,9 @@ export default function Menu() {
 	const buttonNames = ["All", "Today", "Week", "Starred"];
 
 	return (
-		<aside className="flex flex-col gap-[1rem] bg-neutral-50 w-[20rem] p-[2rem] border border-neutral-50">
-			<h2 className="text-xl font-bold">Menu</h2>
+		<aside className="flex flex-col gap-[1rem] bg-neutral-50 w-[20rem] p-[3rem] border border-neutral-50">
+			<h1 className="text-2xl font-bold">Todo</h1>
 			<nav className="flex flex-col flex-1">
-				<hr />
-
 				<section className="my-[1rem]">
 					<h3 className="font-medium py-[0.5rem]">Tasks</h3>
 					<ul className="flex flex-col gap-[0.5rem]">
@@ -41,15 +39,15 @@ export default function Menu() {
 					</ul>
 				</section>
 
-				<section className="mt-auto text-left">
+				<footer className="flex gap-[0.5rem] mt-auto text-left">
 					<a
 						target="#"
 						href="https://github.com/Mocchu/todo-app"
 						className="underline text-[0.9rem] text-neutral-400"
 					>
-						https://github.com/Mocchu/todo-app
+						Mochi - Github
 					</a>
-				</section>
+				</footer>
 			</nav>
 		</aside>
 	);

@@ -1,10 +1,15 @@
 import "../style.css";
 
-export default function Todo({ title, status, key }, toggleStatus) {
+export default function Todo(
+	{ title, status, key },
+	toggleStatus,
+	showDetails
+) {
 	return (
 		<a
 			key={key}
 			className="flex gap-[1rem] w-[90%] items-center text-left hover:bg-neutral-50 p-[0.5rem] border-b-[1px] border-neutral-200 hover:cursor-pointer active:bg-neutral-200"
+			onClick={() => showDetails({ title, status, key })}
 		>
 			<input
 				type="checkbox"

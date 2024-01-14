@@ -5,23 +5,30 @@ import Details from "./components/Details";
 import { useState } from "react";
 
 export default function App() {
-	const [todos, setTodos] = useState([
-		{
-			title: "Create todo app",
-			status: false,
-			key: crypto.randomUUID(),
-		},
-	]);
+	const defaultTodo = {
+		title: "Create todo app",
+		status: true,
+		key: crypto.randomUUID(),
+	};
+	const [todos, setTodos] = useState([defaultTodo]);
+	const [details, setDetails] = useState(defaultTodo);
 
 	function toggleStatus(key, status) {
 		setTodos((currentTodos) => {
 			return currentTodos.map((todo) => {
 				if (todo.key === key) {
+					// Scuffed fix to mirror toggled checkbox
+					showDetails({ ...todo, status });
+
 					return { ...todo, status };
 				}
 				return todo;
 			});
 		});
+	}
+
+	function showDetails(todo) {
+		setDetails(todo);
 	}
 
 	return (
@@ -31,8 +38,9 @@ export default function App() {
 				todos={todos}
 				setTodos={setTodos}
 				toggleStatus={toggleStatus}
+				showDetails={showDetails}
 			/>
-			<Details />
+			<Details todo={details} />
 		</div>
 	);
 }

@@ -13,7 +13,7 @@ export default function NewTodoForm({ setTodos }) {
 		setTodos((currentTodos) => {
 			return [
 				...currentTodos,
-				{ title: title, key: crypto.randomUUID() },
+				{ title: title, status: false, key: crypto.randomUUID() },
 			];
 		});
 	}

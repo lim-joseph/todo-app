@@ -16,15 +16,17 @@ export default function Todo(todo, toggleStatus, setDetails) {
 				onChange={(e) => toggleStatus(key, e.target.checked)}
 			/>
 			<div className="min-w-[20rem]">
-				<h3 className="self-center">{title}</h3>
+				<h3 className="self-center font-semibold text-neutral-800">
+					{title}
+				</h3>
 				<ul className="flex text-xs gap-[0.5rem] text-neutral-500">
-					<li className="overflow-hidden text-nowrap">
+					<li className="max-w-[15rem] overflow-hidden text-ellipsis text-nowrap">
 						{description}
 					</li>
 					<li> &#183;</li>
-					<li className="overflow-hidden text-nowrap">{dueDate}</li>
+					<li className="w-min text-center text-nowrap">{dueDate}</li>
 					<li> &#183;</li>
-					<li className="overflow-hidden text-nowrap">{`${priority} Priority`}</li>
+					<li className="w-min text-center text-nowrap">{`${priority} Priority`}</li>
 				</ul>
 			</div>
 			<button className="ml-auto hover:bg-neutral-200 p-[0.5rem] active:bg-neutral-200">

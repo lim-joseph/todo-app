@@ -9,7 +9,7 @@ export default function TodoList({
 	setDetails,
 }) {
 	return (
-		<section className="flex flex-1 gap-[1rem] flex-col p-[3rem] border border-neutral-50">
+		<section className="flex flex-1 gap-[1rem] flex-col md:p-[3rem] p-[1rem] border border-neutral-50">
 			<h2 className="text-2xl font-bold">Dashboard</h2>
 			<NewTodoForm setTodos={setTodos} />
 			<div>

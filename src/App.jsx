@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function App() {
 	const defaultTodo = {
 		title: "Create a todo app",
-		description: "Learn react simultaneously",
+		description: "Struggle to learn react simultaneously",
 		dueDate: "01/01",
 		priority: "High",
 		status: true,
@@ -39,7 +39,7 @@ export default function App() {
 				toggleStatus={toggleStatus}
 				setDetails={setDetails}
 			/>
-			<Details todo={details} />
+			<Details todos={todos} todo={details} setTodos={setTodos} />
 		</div>
 	);
 }

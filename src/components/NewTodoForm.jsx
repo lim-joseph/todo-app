@@ -34,7 +34,14 @@ export default function NewTodoForm({ setTodos }) {
 				type="submit"
 				className="text-lg hover:bg-neutral-100 p-[0.1rem] px-[0.5rem] active:bg-neutral-200"
 			>
-				+
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					height="15"
+					viewBox="0 -960 960 960"
+					width="15"
+				>
+					<path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+				</svg>
 			</button>
 			<input
 				type="text"

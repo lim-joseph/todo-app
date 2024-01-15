@@ -36,7 +36,7 @@ export default function Details({ todo }) {
 						htmlFor="status"
 						className="font-semibold text-sm text-neutral-500"
 					>
-						Status:
+						Status
 					</label>
 					<input
 						id="status"

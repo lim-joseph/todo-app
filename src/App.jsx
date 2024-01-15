@@ -7,6 +7,9 @@ import { useState } from "react";
 export default function App() {
 	const defaultTodo = {
 		title: "Create todo app",
+		description: "Some description text!",
+		dueDate: "01/01",
+		priority: "high",
 		status: true,
 		key: crypto.randomUUID(),
 	};
@@ -17,18 +20,14 @@ export default function App() {
 		setTodos((currentTodos) => {
 			return currentTodos.map((todo) => {
 				if (todo.key === key) {
-					// Scuffed fix to mirror toggled checkbox
-					showDetails({ ...todo, status });
-
-					return { ...todo, status };
+					// Update details pane and library
+					const newTodo = { ...todo, status };
+					setDetails(newTodo);
+					return newTodo;
 				}
 				return todo;
 			});
 		});
-	}
-
-	function showDetails(todo) {
-		setDetails(todo);
 	}
 
 	return (
@@ -38,7 +37,7 @@ export default function App() {
 				todos={todos}
 				setTodos={setTodos}
 				toggleStatus={toggleStatus}
-				showDetails={showDetails}
+				setDetails={setDetails}
 			/>
 			<Details todo={details} />
 		</div>

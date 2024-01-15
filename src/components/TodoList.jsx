@@ -6,7 +6,7 @@ export default function TodoList({
 	todos,
 	setTodos,
 	toggleStatus,
-	showDetails,
+	setDetails,
 }) {
 	return (
 		<section className="flex flex-1 gap-[1rem] flex-col p-[3rem] border border-neutral-50">
@@ -14,7 +14,7 @@ export default function TodoList({
 			<NewTodoForm setTodos={setTodos} />
 			<div>
 				{todos.map((todo) => {
-					return Todo(todo, toggleStatus, showDetails);
+					return Todo(todo, toggleStatus, setDetails);
 				})}
 			</div>
 		</section>

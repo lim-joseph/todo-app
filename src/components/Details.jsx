@@ -1,7 +1,7 @@
 import "../style.css";
 
 export default function Details({ todo }) {
-	const { title, status } = todo;
+	const { title, description, dueDate, priotity, status, key } = todo;
 
 	return (
 		<section className="flex flex-col gap-[1rem] w-[30rem] p-[3rem] border border-neutral-50">
@@ -14,6 +14,7 @@ export default function Details({ todo }) {
 					type="checkbox"
 					checked={status}
 					className="self-center"
+					readOnly
 				/>
 			</div>
 		</section>

@@ -45,7 +45,7 @@ export default function Menu() {
 						href="https://github.com/Mocchu/todo-app"
 						className="underline text-[0.9rem] text-neutral-400"
 					>
-						Mochi - Github
+						Mochi &#183; Github
 					</a>
 				</footer>
 			</nav>

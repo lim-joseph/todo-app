@@ -24,7 +24,7 @@ export default function Todo(todo, toggleStatus, setDetails) {
 					<li> &#183;</li>
 					<li>{dueDate}</li>
 					<li> &#183;</li>
-					<li>{priority}</li>
+					<li>{`${priority} Priority`}</li>
 				</ul>
 			</div>
 			<button className="ml-auto text-lg hover:bg-neutral-200 p-[0.1rem] px-[0.5rem] active:bg-neutral-200">

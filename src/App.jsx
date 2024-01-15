@@ -6,10 +6,10 @@ import { useState } from "react";
 
 export default function App() {
 	const defaultTodo = {
-		title: "Create todo app",
-		description: "Some description text!",
+		title: "Create a todo app",
+		description: "Learn react simultaneously",
 		dueDate: "01/01",
-		priority: "high",
+		priority: "High",
 		status: true,
 		key: crypto.randomUUID(),
 	};
